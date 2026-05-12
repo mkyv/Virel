@@ -1,0 +1,61 @@
+{
+  "signin": {
+    "title": "Ingresar a {appName}",
+    "noAccountPrompt": "¿No tenés cuenta?",
+    "signUpCta": "Registrate"
+  },
+  "signup": {
+    "title": "Crear cuenta en {appName}",
+    "haveAccountPrompt": "¿Ya tenés cuenta?",
+    "signInCta": "Ingresar"
+  },
+  "auth": {
+    "emailPlaceholder": "vos@ejemplo.com",
+    "continueWithEmail": "Continuar con email",
+    "continueWithGoogle": "Continuar con Google",
+    "or": "O",
+    "codeSent": "Te enviamos un código de 6 dígitos a {email}",
+    "codePlaceholder": "123456",
+    "verify": "Verificar",
+    "codeValidity": "El código vence en 1 hora.",
+    "resendCode": "Reenviar código",
+    "resendIn": "Reenviar en {seconds}s",
+    "codeResent": "Código reenviado",
+    "changeEmail": "Usar otro email",
+    "invalidEmail": "Ingresá un email válido",
+    "invalidCode": "Código inválido o vencido",
+    "noAccount": "No existe una cuenta con ese email",
+    "error": "Algo salió mal, intentá de nuevo"
+  },
+  "dashboard": {
+    "title": "Página privada"
+  },
+  "settings": {
+    "title": "Configuración",
+    "emailLabel": "Correo",
+    "emailHint": "Se usa para iniciar sesión. Escribí a soporte si necesitás cambiarlo.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "nameSave": "Guardar",
+    "languageLabel": "Idioma",
+    "subscriptionLabel": "Suscripción",
+    "subscriptionActive": "Activa",
+    "subscriptionCancelled": "Cancelada",
+    "subscriptionInactive": "Sin suscripción activa",
+    "nextBilling": "Próxima facturación: {date}",
+    "accessUntil": "Acceso hasta: {date}",
+    "managePlan": "Administrar suscripción",
+    "viewPlans": "Ver planes",
+    "success": "Configuración actualizada",
+    "error": "No se pudo actualizar la configuración"
+  },
+  "account": {
+    "default": "Cuenta",
+    "billing": "Facturación",
+    "logout": "Cerrar sesión",
+    "profileAlt": "Foto de perfil"
+  },
+  "signinButton": {
+    "default": "Empezar"
+  }
+}

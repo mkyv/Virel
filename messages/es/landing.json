@@ -1,0 +1,75 @@
+{
+  "page": {
+    "loginCta": "Ingresar",
+    "title": "Virel ⚡️",
+    "subtitle": "El comienzo de tu nuevo startup... ¿Qué vas a construir?",
+    "docsCta": "Documentación y tutoriales",
+    "blogCta": "¿Te interesa el blog?"
+  },
+  "header": {
+    "homeAria": "Inicio de {appName}",
+    "links": {
+      "pricing": "Precios",
+      "reviews": "Opiniones",
+      "faq": "FAQ"
+    },
+    "openMenu": "Abrir menú principal",
+    "closeMenu": "Cerrar menú"
+  },
+  "footer": {
+    "logoAlt": "Logo de {appName}",
+    "copyright": "Copyright © {year} - Todos los derechos reservados",
+    "linksTitle": "LINKS",
+    "links": {
+      "support": "Soporte",
+      "pricing": "Precios",
+      "blog": "Blog",
+      "affiliates": "Afiliados"
+    },
+    "legalTitle": "LEGAL",
+    "legal": {
+      "tos": "Términos del servicio",
+      "privacyPolicy": "Política de privacidad"
+    }
+  },
+  "hero": {
+    "title": "Lanzá tu startup en días, no semanas",
+    "description": "El boilerplate de NextJS con todo lo necesario para construir tu SaaS, herramienta de IA o cualquier app web. De la idea a producción en 5 minutos.",
+    "cta": "Obtener {appName}",
+    "imageAlt": "Demo del producto"
+  },
+  "pricing": {
+    "label": "Precios",
+    "title": "Ahorrá horas de código repetitivo y lanzá más rápido",
+    "popular": "POPULAR",
+    "currency": "USD",
+    "trustNote": "Pagás una vez. Acceso para siempre."
+  },
+  "checkout": {
+    "cta": "Obtener {appName}"
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Qué obtengo exactamente?",
+        "answer": "Describí qué recibe el cliente luego de la compra."
+      },
+      {
+        "question": "¿Puedo pedir un reembolso?",
+        "answer": "Sí. Podés solicitar un reembolso dentro de los 7 días posteriores a la compra. Escribinos por mail."
+      },
+      {
+        "question": "Tengo otra pregunta",
+        "answer": "Contactanos por mail y te respondemos a la brevedad."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Potenciá tu app, lanzá, generá",
+    "description": "No pierdas tiempo integrando APIs o diseñando la sección de precios...",
+    "cta": "Obtener {appName}",
+    "imageAlt": "Fondo"
+  }
+}

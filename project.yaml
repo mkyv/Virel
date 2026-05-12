@@ -1,0 +1,71 @@
+app:
+  name: ""             # config.ts > appName | app/layout.tsx > <html lang>
+  description: ""      # config.ts > appDescription
+  domain: ""           # config.ts > domainName (sin https://, sin trailing slash)
+  lang: "en"           # app/layout.tsx > <html lang="...">
+
+branding:
+  theme: "light"       # config.ts > colors.theme (tema DaisyUI)
+  primary_color: ""    # config.ts > colors.main (hex, ej: "#570df8")
+  icon: "app/icon.png"            # reemplazar manualmente con logo de la app
+  og_image: "app/opengraph-image.png"  # reemplazar manualmente, 1200×630px
+
+seo:
+  author_name: ""              # libs/seo.tsx > renderSchemaTags > author.name
+  date_published: ""           # libs/seo.tsx > renderSchemaTags > datePublished (YYYY-MM-DD)
+  application_category: ""     # libs/seo.tsx > renderSchemaTags > applicationCategory
+                                # valores: BusinessApplication | EducationalApplication |
+                                #          EntertainmentApplication | UtilitiesApplication
+
+resend:
+  from_noreply: ""     # config.ts > resend.fromNoReply  (ej: "AppName <noreply@tudominio.com>")
+  from_admin: ""       # config.ts > resend.fromAdmin    (ej: "Tu Nombre <tu@tudominio.com>")
+  support_email: ""    # config.ts > resend.supportEmail
+
+crisp:
+  id: ""               # config.ts > crisp.id (dejar vacío si no se usa)
+
+lemonsqueezy:
+  plans:
+    - variant_id: ""         # config.ts > lemonsqueezy.plans[0].variantId (producción)
+      variant_id_dev: ""     # config.ts > lemonsqueezy.plans[0].variantId (desarrollo, opcional)
+      name: ""               # config.ts > lemonsqueezy.plans[0].name
+      description: ""        # config.ts > lemonsqueezy.plans[0].description
+      price: 0               # config.ts > lemonsqueezy.plans[0].price
+      price_anchor: 0        # config.ts > lemonsqueezy.plans[0].priceAnchor (0 = sin precio tachado)
+      featured: false        # config.ts > lemonsqueezy.plans[0].isFeatured
+      features: []           # config.ts > lemonsqueezy.plans[0].features
+                             # formato: ["Feature 1", "Feature 2"]
+
+    - variant_id: ""         # config.ts > lemonsqueezy.plans[1].variantId (producción)
+      variant_id_dev: ""     # config.ts > lemonsqueezy.plans[1].variantId (desarrollo, opcional)
+      name: ""               # config.ts > lemonsqueezy.plans[1].name
+      description: ""        # config.ts > lemonsqueezy.plans[1].description
+      price: 0               # config.ts > lemonsqueezy.plans[1].price
+      price_anchor: 0        # config.ts > lemonsqueezy.plans[1].priceAnchor
+      featured: false        # config.ts > lemonsqueezy.plans[1].isFeatured
+      features: []           # config.ts > lemonsqueezy.plans[1].features
+
+env:
+  supabase:
+    url: ""                  # .env > NEXT_PUBLIC_SUPABASE_URL
+    anon_key: ""             # .env > NEXT_PUBLIC_SUPABASE_ANON_KEY
+    service_role_key: ""     # .env > SUPABASE_SERVICE_ROLE_KEY
+
+  lemonsqueezy:
+    api_key: ""              # .env > LEMONSQUEEZY_API_KEY
+    store_id: ""             # .env > LEMONSQUEEZY_STORE_ID
+    signing_secret: ""       # .env > LEMONSQUEEZY_SIGNING_SECRET
+
+  resend:
+    api_key: ""              # .env > RESEND_API_KEY
+
+  cloudflare_r2:
+    access_key_id: ""        # .env > CLOUDFLARE_R2_ACCESS_KEY_ID
+    secret_access_key: ""    # .env > CLOUDFLARE_R2_SECRET_ACCESS_KEY
+    bucket_name: ""          # .env > CLOUDFLARE_R2_BUCKET_NAME
+    endpoint: ""             # .env > CLOUDFLARE_R2_ENDPOINT
+    cdn_url: ""              # .env > NEXT_PUBLIC_R2_CDN_URL | next.config.js > remotePatterns hostname
+
+  site:
+    url: ""                  # .env > SITE_URL (ej: "https://tudominio.com")

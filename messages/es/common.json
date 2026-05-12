@@ -1,0 +1,15 @@
+{
+  "back": "Volver",
+  "home": "Inicio",
+  "emailPlaceholder": "tom@cruise.com",
+  "support": {
+    "label": "Soporte",
+    "tooltip": "Hablar con soporte",
+    "title": "Chat con soporte",
+    "emailSubject": "Necesito ayuda con {appName}"
+  },
+  "lead": {
+    "cta": "Sumarme a la lista",
+    "success": "¡Gracias por sumarte a la lista!"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "back": "Back",
+  "home": "Home",
+  "emailPlaceholder": "tom@cruise.com",
+  "support": {
+    "label": "Support",
+    "tooltip": "Talk to support",
+    "title": "Chat with support",
+    "emailSubject": "Need help with {appName}"
+  },
+  "lead": {
+    "cta": "Join waitlist",
+    "success": "Thanks for joining the waitlist!"
+  }
+}

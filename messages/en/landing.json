@@ -1,0 +1,75 @@
+{
+  "page": {
+    "loginCta": "Login",
+    "title": "Virel ⚡️",
+    "subtitle": "The start of your new startup... What are you gonna build?",
+    "docsCta": "Documentation & tutorials",
+    "blogCta": "Fancy a blog?"
+  },
+  "header": {
+    "homeAria": "{appName} homepage",
+    "links": {
+      "pricing": "Pricing",
+      "reviews": "Reviews",
+      "faq": "FAQ"
+    },
+    "openMenu": "Open main menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "logoAlt": "{appName} logo",
+    "copyright": "Copyright © {year} - All rights reserved",
+    "linksTitle": "LINKS",
+    "links": {
+      "support": "Support",
+      "pricing": "Pricing",
+      "blog": "Blog",
+      "affiliates": "Affiliates"
+    },
+    "legalTitle": "LEGAL",
+    "legal": {
+      "tos": "Terms of services",
+      "privacyPolicy": "Privacy policy"
+    }
+  },
+  "hero": {
+    "title": "Ship your startup in days, not weeks",
+    "description": "The NextJS boilerplate with all you need to build your SaaS, AI tool, or any other web app. From idea to production in 5 minutes.",
+    "cta": "Get {appName}",
+    "imageAlt": "Product Demo"
+  },
+  "pricing": {
+    "label": "Pricing",
+    "title": "Save hours of repetitive code and ship faster!",
+    "popular": "POPULAR",
+    "currency": "USD",
+    "trustNote": "Pay once. Access forever."
+  },
+  "checkout": {
+    "cta": "Get {appName}"
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What do I get exactly?",
+        "answer": "Describe what the customer receives after purchase."
+      },
+      {
+        "question": "Can I get a refund?",
+        "answer": "Yes. You can request a refund within 7 days of your purchase. Reach out by email."
+      },
+      {
+        "question": "I have another question",
+        "answer": "Contact us by email and we'll get back to you."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Boost your app, launch, earn",
+    "description": "Don't waste time integrating APIs or designing a pricing section...",
+    "cta": "Get {appName}",
+    "imageAlt": "Background"
+  }
+}

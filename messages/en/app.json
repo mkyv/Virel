@@ -1,0 +1,61 @@
+{
+  "signin": {
+    "title": "Log in to {appName}",
+    "noAccountPrompt": "Don't have an account?",
+    "signUpCta": "Sign up"
+  },
+  "signup": {
+    "title": "Sign up to {appName}",
+    "haveAccountPrompt": "Already have an account?",
+    "signInCta": "Log in"
+  },
+  "auth": {
+    "emailPlaceholder": "you@example.com",
+    "continueWithEmail": "Continue with Email",
+    "continueWithGoogle": "Continue with Google",
+    "or": "OR",
+    "codeSent": "We sent a 6-digit code to {email}",
+    "codePlaceholder": "123456",
+    "verify": "Verify",
+    "codeValidity": "The code expires in 1 hour.",
+    "resendCode": "Resend code",
+    "resendIn": "Resend in {seconds}s",
+    "codeResent": "Code resent",
+    "changeEmail": "Use a different email",
+    "invalidEmail": "Enter a valid email",
+    "invalidCode": "Invalid or expired code",
+    "noAccount": "No account exists with that email",
+    "error": "Something went wrong, try again"
+  },
+  "dashboard": {
+    "title": "Private Page"
+  },
+  "settings": {
+    "title": "Settings",
+    "emailLabel": "Email",
+    "emailHint": "Used to sign in. Contact support if you need to change it.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "nameSave": "Save",
+    "languageLabel": "Language",
+    "subscriptionLabel": "Subscription",
+    "subscriptionActive": "Active",
+    "subscriptionCancelled": "Cancelled",
+    "subscriptionInactive": "No active subscription",
+    "nextBilling": "Next billing: {date}",
+    "accessUntil": "Access until: {date}",
+    "managePlan": "Manage subscription",
+    "viewPlans": "View plans",
+    "success": "Settings updated",
+    "error": "Could not update settings"
+  },
+  "account": {
+    "default": "Account",
+    "billing": "Billing",
+    "logout": "Logout",
+    "profileAlt": "Profile picture"
+  },
+  "signinButton": {
+    "default": "Get started"
+  }
+}
