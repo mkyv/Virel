@@ -49,7 +49,7 @@ cp -r messages/es messages/<nuevo>
 - Cargar `/<nuevo>/` (landing) → debería renderizar en el idioma nuevo.
 - Cargar `/<nuevo>/blog`, `/<nuevo>/pricing`, etc. → idem.
 - Si la cookie `NEXT_LOCALE=<nuevo>` está seteada, ir a `/dashboard` → debería renderizar en el idioma nuevo.
-- `npm run build` para verificar que no falten keys.
+- `pnpm build` para verificar que no falten keys.
 
 ## NO hacer
 - No olvidar ningún archivo de `messages/<nuevo>/` — los tres son requeridos por `i18n/request.ts`.

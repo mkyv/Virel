@@ -1,0 +1,29 @@
+# Config de pnpm para este proyecto.
+#
+# ── minimumReleaseAge ───────────────────────────────────────────────────────
+# Minutos que deben pasar desde que se publica una versión antes de que pnpm
+# la instale. Mitiga ataques de supply-chain en npm (ej. worm "Shai-Hulud" de
+# sept 2025): un paquete malicioso publicado hace pocas horas no llega acá.
+#
+# 4320 min = 3 días. Equilibrio entre protección y poder traer fixes de seguridad
+# rápido. Para algo más estricto, subir a 10080 (7 días). Para deps internas que
+# necesites actualizar al toque, sumarlas a minimumReleaseAgeExclude.
+#
+# Docs: https://pnpm.io/settings#minimumreleaseage
+minimumReleaseAge: 4320
+minimumReleaseAgeExclude: []
+
+# ── allowBuilds ─────────────────────────────────────────────────────────────
+# pnpm bloquea por default los postinstall scripts (otra capa anti-supply-chain).
+# Para correrlos hay que approve-listear cada paquete. Los tres de abajo son
+# binarios nativos legítimos que el stack necesita:
+#   - @tailwindcss/oxide: engine Rust de Tailwind v4 (CSS build).
+#   - sharp: image optimization de Next.js.
+#   - unrs-resolver: resolver Rust usado por eslint y/o oxlint.
+#
+# Si una dep nueva necesita scripts, pnpm va a frenar el install y pedir
+# decisión explícita acá. Es lo que querés — auditar antes de aprobar.
+allowBuilds:
+  '@tailwindcss/oxide': true
+  sharp: true
+  unrs-resolver: true

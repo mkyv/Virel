@@ -22,8 +22,9 @@ Boilerplate base para SaaS sobre Next.js 15. Fork de [ShipFast](https://shipfa.s
 
 1. Clonar este repo, renombrar la carpeta al nombre del proyecto.
 2. Completar `project.yaml` con valores reales (nombre, dominio, credenciales).
-3. `npm run setup` → crea `.env` desde `.env.example`, reemplaza valores en el repo, instala deps y (si tenés el Supabase CLI configurado) aplica `supabase/migrations/0001_initial.sql`.
-4. `npm run dev`.
+3. `corepack enable` (una sola vez por máquina — habilita pnpm sin instalarlo global).
+4. `pnpm setup` → crea `.env` desde `.env.example`, reemplaza valores en el repo, instala deps y (si tenés el Supabase CLI configurado) aplica `supabase/migrations/0001_initial.sql`.
+5. `pnpm dev`.
 
 Pasos manuales que el script no puede automatizar (Supabase Dashboard, LemonSqueezy products, R2 bucket, assets binarios): seguir **[`SETUP.md`](./SETUP.md)** end-to-end.
 
@@ -69,20 +70,22 @@ El workflow de GitHub Actions vive en `.github/workflows-template/ci.yml` (fuera
 mkdir -p .github/workflows && mv .github/workflows-template/ci.yml .github/workflows/
 ```
 
-Corre typecheck + lint + build + Playwright en cada PR. Si usás otra plataforma (Bitbucket Pipelines, GitLab CI), copiá los mismos `npm run ci` / `npm run build` / `npm run test:e2e` a su sintaxis.
+Corre typecheck + lint + build + Playwright en cada PR. Si usás otra plataforma (Bitbucket Pipelines, GitLab CI), copiá los mismos `pnpm check` / `pnpm build` / `pnpm test:e2e` a su sintaxis.
 
 ## Scripts
 
 | Comando | Hace |
 |---|---|
-| `npm run dev` | Dev server en `:3000` |
-| `npm run build` | Build de producción (requiere `SITE_URL` en `.env`) |
-| `npm run start` | Servidor de producción |
-| `npm run lint` | ESLint (flat config) |
-| `npm run typecheck` | `tsc --noEmit` |
-| `npm run ci` | typecheck + lint |
-| `npm run test:e2e` | Smoke tests Playwright |
-| `npm run setup` | Aplica `project.yaml` + `npm install` + (opcional) `supabase db push` |
+| `pnpm dev` | Dev server en `:3000` |
+| `pnpm build` | Build de producción (requiere `SITE_URL` en `.env`) |
+| `pnpm start` | Servidor de producción |
+| `pnpm lint` | ESLint (flat config) |
+| `pnpm typecheck` | `tsc --noEmit` |
+| `pnpm check` | typecheck + lint |
+| `pnpm test:e2e` | Smoke tests Playwright |
+| `pnpm setup` | Aplica `project.yaml` + `pnpm install` + (opcional) `supabase db push` |
+
+> Package manager pineado en `packageManager` (`pnpm@11.x`). Con `corepack enable`, Node descarga la versión exacta automáticamente — no hace falta instalar pnpm global. `pnpm-workspace.yaml` define `minimumReleaseAge: 4320` (3 días) para mitigar supply-chain attacks en npm: nuevas versiones recién publicadas no se instalan hasta que pasen 3 días.
 
 ## Variables de entorno
 

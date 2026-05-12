@@ -7,7 +7,7 @@ description: Inicializa un nuevo proyecto a partir del boilerplate Virel. Reempl
 
 Workflow para transformar este boilerplate en un proyecto concreto. Trabajar **secuencialmente** y confirmar con el usuario en cada bloque antes de avanzar.
 
-La mayoría del trabajo de reemplazo de valores en el repo está automatizado en `scripts/setup.js` (invocable con `npm run setup`). Este skill cubre lo que **no** se puede automatizar: confirmar credenciales, configurar dashboards externos y reemplazar assets binarios.
+La mayoría del trabajo de reemplazo de valores en el repo está automatizado en `scripts/setup.js` (invocable con `pnpm setup`). Este skill cubre lo que **no** se puede automatizar: confirmar credenciales, configurar dashboards externos y reemplazar assets binarios.
 
 ## 0. Prerequisitos
 Confirmar con el usuario:
@@ -17,13 +17,13 @@ Confirmar con el usuario:
 - Si tiene el [Supabase CLI](https://supabase.com/docs/guides/cli) instalado y el proyecto linkeado (`supabase login` + `supabase link`). Si sí, el script aplica las migrations automáticamente; si no, hay que correr el SQL a mano.
 
 ## 1. Llenar `project.yaml`
-Completar todos los campos con los valores reales del proyecto. Las credenciales de servicios externos deben tenerse antes de avanzar — sin ellas, `npm run setup` deja los campos vacíos en `.env` y el dev/build falla.
+Completar todos los campos con los valores reales del proyecto. Las credenciales de servicios externos deben tenerse antes de avanzar — sin ellas, `pnpm setup` deja los campos vacíos en `.env` y el dev/build falla.
 
-## 2. Correr `npm run setup`
+## 2. Correr `pnpm setup`
 Esto:
 - Crea `.env` desde `.env.example` si no existe.
 - Reemplaza valores en `.env`, `config.ts`, `libs/seo.tsx`, `next.config.js > remotePatterns` según `project.yaml`.
-- Ejecuta `npm install`.
+- Ejecuta `pnpm install`.
 - Intenta `supabase db push` (si el CLI está disponible). Si falla, hay que aplicar `supabase/migrations/0001_initial.sql` manualmente en el SQL Editor.
 
 ## 3. Assets (paso manual)
@@ -36,7 +36,7 @@ Reemplazar los archivos binarios listados en **`SETUP.md > Assets`**. El script 
 
 ## 5. LemonSqueezy Dashboard (paso manual)
 - Crear los productos/variantes en LemonSqueezy.
-- Anotar los `variantId` de prod y dev y volcarlos en `project.yaml > lemonsqueezy.plans[]`, luego re-correr `npm run setup` para que se reflejen en `config.ts`.
+- Anotar los `variantId` de prod y dev y volcarlos en `project.yaml > lemonsqueezy.plans[]`, luego re-correr `pnpm setup` para que se reflejen en `config.ts`.
 - Configurar webhook → URL: `https://<dominio>/api/webhook/lemonsqueezy`. Eventos a suscribir: `order_created`, `subscription_created`, `subscription_updated`, `subscription_resumed`, `subscription_cancelled`, `subscription_expired`. Copiar el signing secret a `project.yaml > env.lemonsqueezy.signing_secret`.
 
 ## 6. Cloudflare R2 (paso manual)
@@ -59,17 +59,17 @@ Revisar y reemplazar copy/data placeholder en:
 - `app/[locale]/(landing)/page.tsx` (home placeholder)
 
 ## 9. Verificación
-- `npm run ci` → typecheck + lint pasan.
-- `npm run build` → build completo (necesita `SITE_URL` en `.env`).
-- `npm run dev` → verificar manualmente que `/`, `/es`, `/blog`, `/dashboard`, `/signin`, `/settings` cargan.
-- (Opcional) `npm run test:e2e` → smoke tests Playwright.
+- `pnpm check` → typecheck + lint pasan.
+- `pnpm build` → build completo (necesita `SITE_URL` en `.env`).
+- `pnpm dev` → verificar manualmente que `/`, `/es`, `/blog`, `/dashboard`, `/signin`, `/settings` cargan.
+- (Opcional) `pnpm test:e2e` → smoke tests Playwright.
 
 ## 10. CI (opcional)
 Si vas a usar GitHub Actions, activar el workflow de ejemplo:
 ```bash
 mkdir -p .github/workflows && mv .github/workflows-template/ci.yml .github/workflows/
 ```
-Si usás otra plataforma (Bitbucket, GitLab), copiar los mismos scripts (`npm run ci`, `npm run build`, `npm run test:e2e`) a su sintaxis.
+Si usás otra plataforma (Bitbucket, GitLab), copiar los mismos scripts (`pnpm check`, `pnpm build`, `pnpm test:e2e`) a su sintaxis.
 
 ## Notas
 - Si el usuario no tiene credenciales de algún servicio listo, parar y dejar el resto pendiente — no inventar valores placeholder nuevos.

@@ -1,8 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 
 // Smoke tests E2E para el boilerplate.
-// Local: `npm run test:e2e` (levanta `npm run dev` y reusa si ya está corriendo).
-// CI: instala browsers con `npx playwright install --with-deps`, luego corre los tests.
+// Local: `pnpm test:e2e` (levanta `pnpm dev` y reusa si ya está corriendo).
+// CI: instala browsers con `pnpm exec playwright install --with-deps`, luego corre los tests.
 export default defineConfig({
   testDir: "./e2e",
   fullyParallel: true,
@@ -21,7 +21,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run dev",
+    command: "pnpm dev",
     url: "http://localhost:3000",
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,

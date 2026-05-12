@@ -3,14 +3,14 @@
  * Lee project.yaml y aplica todos los valores en los archivos del proyecto.
  *
  * Uso:
- *   npm run setup
+ *   pnpm setup
  *   — o —
  *   node scripts/setup.js
  *
  * Pasos (en orden):
  *   1. Copia .env.example → .env (si .env no existe).
  *   2. Reemplaza valores en .env, config.ts, libs/seo.tsx, next.config.js.
- *   3. Ejecuta `npm install` para sincronizar dependencias.
+ *   3. Ejecuta `pnpm install` para sincronizar dependencias.
  *   4. (Opcional) Ejecuta `supabase db push` si el CLI de Supabase está
  *      disponible y el proyecto está linkeado. Si no, log warning y sigue.
  */
@@ -248,12 +248,12 @@ if (cdnUrl) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 3. npm install
+// 3. pnpm install
 // ─────────────────────────────────────────────────────────────────────────────
 
 console.log('\nInstalando dependencias…\n');
-if (!run('npm install')) {
-  console.warn('⚠️   npm install falló. Correr manualmente cuando sea posible.');
+if (!run('pnpm install')) {
+  console.warn('⚠️   pnpm install falló. Correr manualmente cuando sea posible.');
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

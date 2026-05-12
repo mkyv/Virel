@@ -174,6 +174,6 @@ Skills disponibles para automatizar: `add-landing-page`, `add-app-section`, `add
 
 ## Tests y CI
 
-- `npm run ci` → typecheck + lint.
-- `npm run test:e2e` → smoke tests en `e2e/` (requiere `npx playwright install chromium` la primera vez).
+- `pnpm check` → typecheck + lint.
+- `pnpm test:e2e` → smoke tests en `e2e/` (requiere `pnpm exec playwright install chromium` la primera vez).
 - Workflow CI vive en `.github/workflows-template/ci.yml`. No se ejecuta en el boilerplate; cada proyecto lo mueve a `.github/workflows/` para activarlo.

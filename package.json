@@ -2,13 +2,17 @@
   "name": "virel",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@11.1.1",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "ci": "npm run typecheck && npm run lint",
+    "check": "pnpm typecheck && pnpm lint",
     "test:e2e": "playwright test",
     "setup": "node scripts/setup.js"
   },
@@ -36,7 +40,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^9.39.4",
-    "@playwright/test": "^1.60.0",
+    "@playwright/test": "^1.59.0",
     "@tailwindcss/postcss": "^4.1.10",
     "@tailwindcss/typography": "^0.5.19",
     "@types/js-yaml": "^4.0.9",
